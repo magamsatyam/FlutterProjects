@@ -1,6 +1,7 @@
 # flutter_news_app
 
-A new Flutter application.
+An Example Flutter News application which demonstrates 
+Bloc Pattern , consuming rest APIS using Dio Library, understanding of rxDart observable sequences and Dart Themes.
 
 ## Getting Started
 
