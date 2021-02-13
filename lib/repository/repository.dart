@@ -5,8 +5,6 @@ import 'package:flutter_news_app/model/news_response.dart';
 import 'package:flutter_news_app/res/strings/app_strings.dart'as urls;
 
 class NewsRepository {
-
-
   final Dio _dio = Dio();
 
   Future<NewsResponse> getSources() async {
@@ -47,7 +45,7 @@ class NewsRepository {
       return NewsArticleResponse.withError("$error");
     }
   }
-  Future<NewsArticleResponse> getHotNews() async {
+  Future<NewsArticleResponse> getBreakingNews() async {
     var params = {
       "apiKey": urls.AppStrings.apiKey,
       "q" : "apple",

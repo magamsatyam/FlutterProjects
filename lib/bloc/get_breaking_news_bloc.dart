@@ -7,8 +7,8 @@ class GetBreakingNewsBloc {
   final BehaviorSubject<NewsArticleResponse> _subject =
   BehaviorSubject<NewsArticleResponse>();
 
-  getHotNews() async {
-    NewsArticleResponse response = await _repository.getHotNews();
+  GetBreakingNews() async {
+    NewsArticleResponse response = await _repository.getBreakingNews();
     _subject.sink.add(response);
   }
 
@@ -19,4 +19,4 @@ class GetBreakingNewsBloc {
   BehaviorSubject<NewsArticleResponse> get subject => _subject;
 
 }
-final getHotNewsBloc = GetBreakingNewsBloc();
+final getBreakingNewsBloc = GetBreakingNewsBloc();

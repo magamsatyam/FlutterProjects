@@ -19,12 +19,12 @@ class _BreakingNewsWidgetState extends State<BreakingNewsWidget> {
   @override
   void initState() {
     super.initState();
-    getHotNewsBloc..getHotNews();
+    getBreakingNewsBloc.GetBreakingNews();
   }
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<NewsArticleResponse>(
-      stream: getHotNewsBloc.subject.stream,
+      stream: getBreakingNewsBloc.subject.stream,
       builder: (context, AsyncSnapshot<NewsArticleResponse> snapshot) {
         if (snapshot.hasData) {
           if (snapshot.data.error != null &&
@@ -40,6 +40,8 @@ class _BreakingNewsWidgetState extends State<BreakingNewsWidget> {
       },
     );
   }
+
+
   Widget _buildHotNewsWidget(NewsArticleResponse data) {
     List<ArticleModel> articles = data.articles;
 
